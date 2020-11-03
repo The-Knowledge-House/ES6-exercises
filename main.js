@@ -3,7 +3,10 @@
 // and odd numbers
 // Using the spread operator, make a new
 // array with numbers that contains all of the evens and odds
+const even = [2, 4, 6, 8];
+const odd = [1, 3, 5, 7];
 
+const allNum = [...even, ...odd];
 
 
 //Exercise #2
@@ -14,7 +17,22 @@
 // imaginary friend what their favorite foods are. 
 // Use the spread operator to build a final allFoods with the 
 // items from the two objects you just built
+const favoriteFoods = {
+  sesameChicken: "Panda Express",
+  orangeChicken: "CheeseCake",
+  burger: "5Guys"
+}
 
+const imaginaryFriend = {
+  questionOne: "what's your favorite food?",
+  questionTwo: "what you next favorite food?",
+  questionThree: "what's your last favorite food?"
+}
+
+const allFoods = {
+  ...favoriteFoods,
+  ...imaginaryFriend
+}
 
 
 // Exercise #3
@@ -30,3 +48,31 @@
 // 2) define three variables (age, breed, name) outside of the object
 // 3) add those variables to your pet
 // log the most important thing about it: the pet's name 
+
+let favMovieChar = {
+  name: "John McClane",
+  age: "38",
+  hometown: "NYC"
+}
+
+// const { name, age, hometown } = favMovieChar;
+// console.log(name);
+// console.log(age);
+// console.log(hometown);
+
+const { name, hometown, ...other } = favMovieChar;
+
+console.log(name, hometown, other.age);
+
+const pet = {};
+favMovieChar = { ...favMovieChar, pet }
+
+let petName = 'Pepe';
+let petAge = 15;
+let petBreed = 'Chihuahua';
+
+favMovieChar.pet.Name = petName;
+favMovieChar.pet.Age = petAge;
+favMovieChar.pet.Breed = petBreed;
+
+console.log(favMovieChar);

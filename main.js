@@ -4,6 +4,11 @@
 // Using the spread operator, make a new
 // array with numbers that contains all of the evens and odds
 
+const odds = [3, 5, 7]
+const evens = [2, 4, 6]
+const nums1 = [...odds, ...evens];
+
+console.log(nums1);
 
 
 //Exercise #2
@@ -15,7 +20,10 @@
 // Use the spread operator to build a final allFoods with the 
 // items from the two objects you just built
 
-
+faveFoods = { burgers: 'Jacksons', pizza: 'Difara', steak: 'Benjamins' }
+friendFaveFoods = { sandwich: 'subway', pasta: 'carmines', salad: 'chopped' }
+allFoods = { ...faveFoods, ...friendFaveFoods };
+console.log(allFoods);
 
 // Exercise #3
 // Define your favorite movie character in an object
@@ -30,3 +38,22 @@
 // 2) define three variables (age, breed, name) outside of the object
 // 3) add those variables to your pet
 // log the most important thing about it: the pet's name 
+
+const favoriteCharacter = {
+  name: "Arnold",
+  age: 9,
+  hometown: "Hillwood"
+}
+
+const { name: charName, age: charAge, hometown: charHome } = favoriteCharacter;
+console.log(charName, charAge, charHome)
+
+const { hometown, ...character } = favoriteCharacter
+
+let age = 13;
+let breed = "pig";
+let name = "Abner";
+
+character.pet = { age, breed, name }
+
+console.log(character.pet.name)

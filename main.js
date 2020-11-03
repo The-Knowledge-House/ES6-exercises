@@ -4,7 +4,10 @@
 // Using the spread operator, make a new
 // array with numbers that contains all of the evens and odds
 
-
+const odds = [3, 5, 7]
+const evens = [2, 4, 6]
+const nums = [...odds, ...evens];
+console.log(nums);
 
 //Exercise #2
 // Define an object favoriteFoods that has keys representing three of 
@@ -15,6 +18,11 @@
 // Use the spread operator to build a final allFoods with the 
 // items from the two objects you just built
 
+faveFoods = { burgers: 'astoria', halal: 'manhttan', steak: 'steak House' }
+friendFaveFoods = { sandwich: 'subway', pasta: 'carmines', salad: 'chopped' }
+allFoods = { ...faveFoods, ...friendFaveFoods };
+console.log(allFoods);
+   
 
 
 // Exercise #3
@@ -30,3 +38,18 @@
 // 2) define three variables (age, breed, name) outside of the object
 // 3) add those variables to your pet
 // log the most important thing about it: the pet's name 
+
+myself = { name: 'Ayman', age: '26', hometown: 'Astoria' }
+// const { name, age, hometown } = myself
+// console.log(name, age, hometown);
+const { name, age, ...me } = myself
+console.log(name, age, me.hometown);
+const pet = {}
+myself = { ...myself, pet }
+let petName = 'maike'
+let petAge = 1
+let petBreed = 'German-Shephard'
+myself.pet.Name = petName
+myself.pet.Age = petAge
+myself.pet.Breed = petBreed
+console.log(myself.pet.Name)

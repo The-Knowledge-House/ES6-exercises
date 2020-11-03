@@ -42,3 +42,25 @@ console.log(allFoods);
 // 2) define three variables (age, breed, name) outside of the object
 // 3) add those variables to your pet
 // log the most important thing about it: the pet's name
+let favCharacter = {
+  name: "Letitia (Leti) Lewis",
+  age: 25,
+  hometown: "Southside Chicago",
+};
+// let { name, age, hometown } = favCharacter;
+// console.log(favCharacter);
+// console.log(name, age, hometown);
+
+let { hometown, ...other } = favCharacter;
+console.log(favCharacter);
+// console.log(name, age, character );
+
+const pet = {};
+favCharacter = { ...favCharacter, pet };
+let petName = "Bruce";
+let petAge = 1;
+let petBreed = "Shoggoth";
+favCharacter.pet.Name = petName;
+favCharacter.pet.Age = petAge;
+favCharacter.pet.Breed = petBreed;
+console.log(favCharacter.pet.Name, favCharacter.pet.Age, favCharacter.pet.Breed);

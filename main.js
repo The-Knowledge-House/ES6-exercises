@@ -16,7 +16,18 @@ console.log(allNums);
 // imaginary friend what their favorite foods are.
 // Use the spread operator to build a final allFoods with the
 // items from the two objects you just built
-
+const MyFavoriteFoods = {
+  restaurantA: "dish1",
+  restaurantC: "dish2",
+  restaurantB: "dish3",
+};
+const friendFavoriteFoods = {
+  restaurantE: "dish4",
+  restaurantD: "dish5",
+  restaurantF: "dish6",
+};
+const allFoods = { ...MyFavoriteFoods, ...friendFavoriteFoods };
+console.log(allFoods);
 
 // Exercise #3
 // Define your favorite movie character in an object

@@ -19,7 +19,7 @@ console.log(nums1);
 // Use the spread operator to build a final allFoods with the 
 // items from the two objects you just built
 
-faveFoods = { burgers: 'Jacksons', pizza: 'Difara', steak: 'Benjamins' }
+faveFoods = { burgers: '5 Napkins', pizza: 'Joes', steak: 'Peter Luger' }
 friendFaveFoods = { sandwich: 'subway', pasta: 'carmines', salad: 'chopped' }
 allFoods = { ...faveFoods, ...friendFaveFoods };
 console.log(allFoods);
@@ -40,16 +40,16 @@ console.log(allFoods);
 // 3) add those variables to your pet
 // log the most important thing about it: the pet's name 
 
-myself = { name: 'Jonathan', age: '26', hometown: 'Queens' }
+myself = { name: 'Stephanie', age: '28', hometown: 'Bronx' }
 // const { name, age, hometown } = myself
 // console.log(name, age, hometown);
 const { name, age, ...me } = myself
 console.log(name, age, me.hometown);
 const pet = {}
 myself = { ...myself, pet }
-let petName = 'fred'
-let petAge = 1
-let petBreed = 'German-Shephard'
+let petName = 'Rusty'
+let petAge = 8
+let petBreed = 'Long-Haired Dachshund'
 myself.pet.Name = petName
 myself.pet.Age = petAge
 myself.pet.Breed = petBreed

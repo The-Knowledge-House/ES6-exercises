@@ -53,7 +53,7 @@ console.log(finalFoods);
 let bladeRunner2049 = {
     character: 'Officer K',
     age: 13,
-    hometown: 'Las Vegas',
+    hometown: 'Las Vegas'
 
 };
 

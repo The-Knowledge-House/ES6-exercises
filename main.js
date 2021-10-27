@@ -32,6 +32,7 @@ const allFood = {
     ...favoriteFoods2
 }
 
+console.log(allFood)
 
 // Exercise #3
 // Define your favorite movie character in an object
@@ -39,6 +40,7 @@ const allFood = {
 
 // Use destructuring to extract all three keys into variables
 // log all three variables
+
 // Use the spread operator to extract two of the keys but not the third
 // store and log this new set of variables
 
@@ -54,19 +56,26 @@ const favMovieCharacter = {
     name: "Spongebob",
     age: 20,
     hometown: "Bikini Bottom",
+}
+const {name, age, hometown} = favMovieCharacter
+
+const {name, age} = newVariable
+
+console.log(name)
+console.log(age)
+console.log(hometown)
+
+const characterPet = {
     pet : {
         age: "",
         breed: "",
         name: ""
     }
 }
-const {name, age, hometown, pet} = favMovieCharacter
-
+const {name, age, pet} = characterPet
 pet.age = 2
 pet.breed = "snail"
 pet.name = "Gary"
-console.log(name)
-console.log(age)
-console.log(hometown)
+
 console.log(pet)
 console.log(pet.name)

@@ -61,22 +61,23 @@ const favMovieCharacter = {
 // const { name, age, hometown } = favMovieCharacter;
 // console.log(name, age, hometown);
 
-const { hometown, ...rest } = favMovieCharacter;
-console.log(rest);
+const { hometown, ...value } = favMovieCharacter;
+console.log(value);
 
 const pet = {
 	age: 20,
 	breed: "Scarlet macaw",
-	name: "Parrot",
+	name: "Who Knows",
 };
 
 const { name } = pet;
 
 console.log(name);
 
-let addPet = {
+const addPet = {
 	...favMovieCharacter,
 	...pet,
 };
 
 console.log(addPet);
+

@@ -52,7 +52,7 @@ console.log(allFoods);
 // 3) add those variables to your pet
 // log the most important thing about it: the pet's name
 
-const favMovieCharacter = {
+let favMovieCharacter = {
 	name: "Captain Jack Sparrow",
 	age: 60,
 	hometown: "Shipwreck Cove",
@@ -61,23 +61,22 @@ const favMovieCharacter = {
 // const { name, age, hometown } = favMovieCharacter;
 // console.log(name, age, hometown);
 
-const { hometown, ...value } = favMovieCharacter;
+let { hometown, ...value } = favMovieCharacter;
 console.log(value);
 
-const pet = {
-	age: 20,
-	breed: "Scarlet macaw",
-	name: "Who Knows",
-};
-
-const { name } = pet;
-
-console.log(name);
-
-const addPet = {
+const pet = {};
+favMovieCharacter = {
 	...favMovieCharacter,
-	...pet,
+	pet,
 };
 
-console.log(addPet);
+let petName = "Who Knows";
+let petAge = 20;
+let petBreed = "Scarlet Macaw";
+favMovieCharacter.pet.Name = petName;
+favMovieCharacter.pet.Age = petAge;
+favMovieCharacter.pet.Breed = petBreed;
+
+console.log(favMovieCharacter.pet.Name);
+console.log(favMovieCharacter);
 

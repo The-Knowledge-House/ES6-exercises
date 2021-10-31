@@ -70,13 +70,20 @@ favMovieCharacter = {
 	pet,
 };
 
-let petName = "Who Knows";
-let petAge = 20;
-let petBreed = "Scarlet Macaw";
-favMovieCharacter.pet.Name = petName;
-favMovieCharacter.pet.Age = petAge;
-favMovieCharacter.pet.Breed = petBreed;
+const pet = {};
+favMovieCharacter = {
+	...favMovieCharacter,
+	pet,
+};
+
+let Name = "Who Knows";
+let Age = 20;
+let Breed = "Scarlet Macaw";
+favMovieCharacter.pet.Name = Name;
+favMovieCharacter.pet.Age = Age;
+favMovieCharacter.pet.Breed = Breed;
 
 console.log(favMovieCharacter.pet.Name);
+console.log(pet);
 console.log(favMovieCharacter);
 

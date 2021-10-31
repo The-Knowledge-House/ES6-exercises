@@ -70,12 +70,6 @@ favMovieCharacter = {
 	pet,
 };
 
-const pet = {};
-favMovieCharacter = {
-	...favMovieCharacter,
-	pet,
-};
-
 let Name = "Who Knows";
 let Age = 20;
 let Breed = "Scarlet Macaw";

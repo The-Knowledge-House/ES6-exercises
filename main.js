@@ -45,16 +45,28 @@ console.log(allFoods);
 // 3) add those variables to your pet
 // log the most important thing about it: the pet's name
 
-favCharacter = {
+//ADD LET
+let favCharacter = {
   name: 'John wick',
   age: '44',
   hometown: 'New York'
-}
+};
 
-const { name, age, hometown } = favCharacter;
+let { name, age, hometown } = favCharacter;
+console.log(name);
+console.log(age);
+console.log(hometown);
 
-console.log(favCharacter);
+//let {hometown, ...other } = favCharacter
+//console.log(favCharacter);
 
-console.log(favCharacter(null, age));
+let pet = {};
+favCharacter = {...favCharacter, pet};
+let Name = 'Daisy';
+let Age = '1';
+let breed = 'beagle';
+favCharacter.pet.Name;
+favCharacter.pet.Age;
+favCharacter.pet.breed;
 
-const firstTow = [...name, ...age] ///spread operator step
+console.log(pet);

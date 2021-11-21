@@ -4,18 +4,32 @@
 // Using the spread operator, make a new
 // array with numbers that contains all of the evens and odds
 
-
+const even = [2, 4, 6];
+const odd = [1, 3, 5];
+let allNum = [...odd, ...even, 7, 9]; //odd does not show
+console.log(allNum);
 
 //Exercise #2
-// Define an object favoriteFoods that has keys representing three of 
+// Define an object favoriteFoods that has keys representing three of
 // your favorite foods and the values should be the restaurant where
 // they are from
-// Make another object and do the same thing but ask your 
-// imaginary friend what their favorite foods are. 
-// Use the spread operator to build a final allFoods with the 
+// Make another object and do the same thing but ask your
+// imaginary friend what their favorite foods are.
+// Use the spread operator to build a final allFoods with the
 // items from the two objects you just built
 
-
+const favFood = {
+  tacos2: 'el broncos tacos',
+  thai: 'zenith',
+  peruvian: 'pio pio'
+}
+const friendFav = {
+  steak: 'keens',
+  friedChiken: 'popeyes',
+  tacos: 'tacobell'
+}
+let allFoods = { ...favFood, ...friendFav }
+console.log(allFoods);
 
 // Exercise #3
 // Define your favorite movie character in an object
@@ -29,4 +43,30 @@
 // 1) add a pet object to your person
 // 2) define three variables (age, breed, name) outside of the object
 // 3) add those variables to your pet
-// log the most important thing about it: the pet's name 
+// log the most important thing about it: the pet's name
+
+//ADD LET
+let favCharacter = {
+  name: 'John wick',
+  age: '44',
+  hometown: 'New York'
+};
+
+let { name, age, hometown } = favCharacter;
+console.log(name);
+console.log(age);
+console.log(hometown);
+
+//let {hometown, ...other } = favCharacter
+//console.log(favCharacter);
+
+let pet = {};
+favCharacter = {...favCharacter, pet};
+let Name = 'Daisy';
+let Age = '1';
+let breed = 'beagle';
+favCharacter.pet.Name;
+favCharacter.pet.Age;
+favCharacter.pet.breed;
+
+console.log(pet);
